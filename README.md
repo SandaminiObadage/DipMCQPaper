@@ -1,60 +1,53 @@
-# DipMCQPaper
+📝 GRADIENT – Automated MCQ Grading with OpenCV
+DipMCQPaper is a Python-powered solution for scanning and grading multiple-choice question (MCQ) papers using OpenCV and QR code detection. Designed for accuracy and efficiency, this tool automates MCQ evaluations with real-time scanning and result generation.
 
-DipMCQPaper is a Python project for scanning and grading multiple-choice question (MCQ) papers using OpenCV and QR code detection.
+🚀 Features
+✔️ Automated Grading – Scan and evaluate MCQ papers instantly
+✔️ QR Code Integration – Detect and decode unique paper identifiers
+✔️ Intelligent Image Processing – Recognizes answer bubbles with high accuracy
+✔️ Customizable Inputs – Define the number of questions and choices
+✔️ Exportable Results – Saves grades to Marks.xlsx for easy access
 
-## Project Structure
+📂 Project Structure
+📁 DipMCQPaper
+ ┣ 📜 OMR_Main.py        # Main script for scanning & grading
+ ┣ 📜 utils.py           # Image processing helper functions
+ ┣ 📜 requirements.txt   # Dependencies list
+ ┣ 📜 README.md          # Project documentation
+ ┣ 📁 data               # Sample MCQ papers & test images
 
-## Requirements
+🛠 Tech Stack
+🔹 Python 3.x | OpenCV | NumPy | Pyzbar | Pandas | Tkinter
 
-- Python 3.x
-- OpenCV
-- NumPy
-- Pyzbar
-- Pandas
-- Tkinter
+🔧 Installation & Setup
+Clone the repository:
+git clone https://github.com/yourusername/DipMCQPaper.git
+cd DipMCQPaper
 
-## Installation
+Install dependencies:
+pip install -r requirements.txt
 
-1. Clone the repository:
-    ```sh
-    git clone https://github.com/yourusername/DipMCQPaper.git
-    cd DipMCQPaper
-    ```
+▶️ Usage
+Run the grading script:
+python OMR_Main.py
 
-2. Install the required packages:
-    ```sh
-    pip install opencv-python-headless numpy pyzbar pandas
-    ```
+📌 Steps:
+1️⃣ Enter the number of questions and choices
+2️⃣ Capture or upload an MCQ paper image
+3️⃣ View results in Marks.xlsx and a popup display
 
-## Usage
+⚡ Core Functions
+🔹 utlis.py (Image Processing):
+✔ stackImages() – Combines multiple images for better visualization
+✔ reorder() – Reorders corner points for accurate perspective transformation
+✔ rectContour() – Identifies rectangular contours
+✔ splitBoxes() – Extracts individual MCQ bubbles from the scanned image
+✔ showAnswers() – Highlights correct and incorrect responses
 
-1. Run the main script:
-    ```sh
-    python OMR_Main.py
-    ```
-
-2. Follow the prompts to enter the number of questions and choices.
-
-3. The script will capture images from the specified IP camera or use the provided image (`7.jpg`) for processing.
-
-4. The results will be saved in [Marks.xlsx](http://_vscodecontentref_/3) and displayed in a popup message.
-
-## Functions
-
-### [utlis.py](http://_vscodecontentref_/4)
-
-- [stackImages(imgArray, scale, lables=[])](http://_vscodecontentref_/5): Stacks multiple images for display.
-- [reorder(myPoints)](http://_vscodecontentref_/6): Reorders corner points for perspective transformation.
-- [rectContour(contours)](http://_vscodecontentref_/7): Finds rectangular contours.
-- [getCornerPoints(cont)](http://_vscodecontentref_/8): Gets corner points of a contour.
-- [splitBoxes(img, questions, choices)](http://_vscodecontentref_/9): Splits the image into boxes for each question and choice.
-- [drawGrid(img, questions=5, choices=5)](http://_vscodecontentref_/10): Draws a grid on the image.
-- [showAnswers(img, myIndex, grading, ans, questions=5, choices=5)](http://_vscodecontentref_/11): Shows the answers on the image.
-- [get_qr_code_data(image)](http://_vscodecontentref_/12): Decodes QR code data from the image.
-- [get_number_of_choices()](http://_vscodecontentref_/13): Prompts the user to enter the number of choices per question.
-- [get_number_of_questions()](http://_vscodecontentref_/14): Prompts the user to enter the number of questions.
-- [get_answers(number_of_questions, number_of_choices)](http://_vscodecontentref_/15): Prompts the user to enter the answers for each question.
-
-## License
-
+📜 License
 This project is licensed under the MIT License. See the LICENSE file for details.
+
+🎯 Contributing
+Contributions are welcome! Feel free to fork, improve, and submit a PR.
+
+🚀 Let's automate MCQ grading like never before! 🖥️✨
